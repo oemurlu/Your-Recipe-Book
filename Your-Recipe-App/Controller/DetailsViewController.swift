@@ -10,12 +10,11 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
     @IBOutlet weak var recipeLabel: UILabel!
     
-    
+    var recipe: Recipe?
     
 
     override func viewDidLoad() {
