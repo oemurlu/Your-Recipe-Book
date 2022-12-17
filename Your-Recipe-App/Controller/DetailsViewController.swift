@@ -10,6 +10,7 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
     @IBOutlet weak var recipeLabel: UILabel!
@@ -20,7 +21,9 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        nameLabel.text = recipe?.name
+        ingredientsLabel.text = recipe?.ingredients
+        recipeLabel.text = recipe?.recipe
     }
 
 
