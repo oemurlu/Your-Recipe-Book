@@ -436,7 +436,7 @@
                                                     <color key="baseBackgroundColor" red="1" green="0.21176470589999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="randomButtonPressed:" destination="snY-af-JT0" eventType="touchUpInside" id="0Bw-7H-glU"/>
+                                                    <action selector="randomButtonPressed:" destination="snY-af-JT0" eventType="touchUpInside" id="fOl-Ph-GOX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
