@@ -193,7 +193,7 @@
                                                     <color key="baseBackgroundColor" red="1" green="0.21176470589999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="searchButtonPressed:" destination="Qbq-IN-dTv" eventType="touchUpInside" id="aZc-F7-DMw"/>
+                                                    <action selector="searchButtonPressed:" destination="Qbq-IN-dTv" eventType="touchUpInside" id="dR8-o8-mMZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
