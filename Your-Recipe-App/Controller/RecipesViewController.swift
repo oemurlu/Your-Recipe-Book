@@ -94,6 +94,24 @@ extension RecipesViewController: UITableViewDelegate {
         chosenRecipe = recipes?[indexPath.row]
         self.performSegue(withIdentifier: "goToDetailsVC", sender: nil)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let recipeToDelete = self.recipes?[indexPath.row] {
+                do {
+                    try self.realm.write({
+                        self.realm.delete(recipeToDelete)
+                        self.recipesTableView.reloadData()
+                        if self.recipesTableView.numberOfRows(inSection: 0) == 0 {
+                            placeholder.isHidden = false
+                        }
+                    })
+                } catch {
+                    print("Something went wrong while deleting recipe.")
+                }
+            }
+        }
+    }
 }
 
     
