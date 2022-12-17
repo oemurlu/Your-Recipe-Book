@@ -33,7 +33,17 @@ class RecipesViewController: UIViewController {
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
+        getRecipesFromDb()
         
+        let searchText = searchTextField.text!
+        
+        if searchText.count == 0 {
+            getRecipesFromDb()
+        } else {
+            recipes = recipes?.filter("name CONTAINS[cd] %@", searchText).sorted(byKeyPath: "name", ascending: true)
+        }
+        
+        recipesTableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
